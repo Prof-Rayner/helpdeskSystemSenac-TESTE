@@ -597,6 +597,7 @@ $router->get('/api/categorias', function (): void {
         ], 500);
     }
 });
+
 $router->get('/api/categorias', function (): void {
 	try {
 		apiRequireAuthUser();
@@ -615,6 +616,7 @@ $router->get('/api/categorias', function (): void {
 		], 500);
 	}
 });
+
 $router->post('/api/login', function (): void {
     try {
         $payload = apiReadJsonBody();
