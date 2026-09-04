@@ -1,0 +1,18 @@
+{
+  "installCommand": "cd chirper && npm ci",
+  "buildCommand": "cd chirper && npm run build",
+  "outputDirectory": "chirper/dist",
+
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.9.0"
+    }
+  },
+
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.php"
+    }
+  ]
+}
