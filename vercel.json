@@ -1,6 +1,8 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+
   "installCommand": "cd chirper && npm ci",
-  "buildCommand": "cd chirper && npm run build",
+  "buildCommand": "bash build-patch.sh && cd chirper && npm run build",
   "outputDirectory": "chirper/dist",
 
   "functions": {
